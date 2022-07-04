@@ -2,19 +2,20 @@
 /**
 *main - entry point
 *
-*Description: print the alphabet in lowercase
-*followed by a new line
+*Description: print the letters of the alphabet ecept, e, q
 *
 *Return: Always 0
 */
 int main(void)
 {
-char ch;
-for (ch = 'a'; ch <= 'z'; ch++)
+int i = 97;
+while (i < 123)
 {
-if (ch != 'q' && ch != 'e')
+if (i != '101' && i != '113')
 {
-putchar(ch);
+putchar(i);
+}
+i++;
 }
 putchar(10);
 return (0);
