@@ -7,15 +7,12 @@
 *Return: Always 0
 */
 int main(void)
+char ch;
+for (a = 'a'; a <= 'z'; a++)
 {
-int i = 97;
-while (i < 123)
+if (a == 'q' || a  --  'e')
 {
-if (i != '101' && i != '113')
-{
-putchar(i);
-}
-i++;
+continue;
 }
 putchar(10);
 return (0);
