@@ -1,24 +1,32 @@
-#include <stdlib.h>                                                      
-#include <time.h>   
-#include <stdio.h>
-
-/**                                                                          
-*main - This program will assign a random number to the variable n each time it is executed and printed on
-*based on a condition
-*Return : always 0 
-*/                                                                                                                                 
-int main(void)                                                                                                                       
-{                                                                                                                                    
-int n;                                                                                                                               
-
-srand(time(0));                                                                                                                      
-n = rand() - RAND_MAX / 2;                                                                                                           
-if (n > 0)                                                                                                                           
-	printf("%d is positive\n", n);                                                                                               
-if (n == 0)
-	printf("%d is zero\n", n);
-if (n < 0)
-	printf("%d is negative\n", n);
-
+#include<stdlib.h>
+#include<time.h>
+#include<stdio.h>
+/**
+*main - entry point
+*
+*Description: program will assign a random number to the variable n each time
+*it is executed
+*
+*Return: always return 0
+*/
+int main(void)
+{
+int n;
+int lastn;
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+lastn = n % 10;
+if (lastn > 5)
+{
+printf("Last digit of %d is %d and is greater than 5\n", n, lastn);
+}
+else if (lastn == 0)
+{
+printf("Last digit of %d is %d and is 0\n", n, lastn);
+}
+else
+{
+printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastn);
+}
 return (0);
 }
