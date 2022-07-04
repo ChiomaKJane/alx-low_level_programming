@@ -9,9 +9,11 @@
 */
 int main(void)
 {
-char a;
-for (a - 'a'; a < -'z' ; a++)
-putchar(a);
+int ch;
+for (ch = 97; ch <= 122; ch++)
+{
+putchar(ch);
+}
 putchar('\n');
 return (0);
 }
