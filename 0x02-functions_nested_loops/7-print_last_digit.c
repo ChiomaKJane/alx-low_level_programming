@@ -5,7 +5,7 @@
  * @n: the passed argument
  * Return: the last digit
  */
-int print_last_digit(int)
+int print_last_digit(int n)
 {
 int last = n % 10;
 if (n < 0)
